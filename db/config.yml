@@ -1,0 +1,17 @@
+production:
+  adapter: mysql
+  host: 127.0.0.1
+  database: railway_system
+  user: root
+  password: root
+
+development:
+  adapter: mysql
+  host: 127.0.0.1
+  database: railway_system
+  user: root
+  password: root
+
+test: &test
+  adapter: sqlite3
+  database: railway_system.db
