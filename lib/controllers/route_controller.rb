@@ -10,9 +10,15 @@ class RouteController
   end
 
   def get_routes(filter = {})
-    RouteRepository.where(filter)
+    filter[:is_deleted] = false
+    RouteRepository.where(:is_deleted => false, :id => 2)
   end
 
-  def delete_route(user_id)
+  def delete_route(id)
+    route = RouteRepository.where(:id => id).first
+    if route != nil
+      route.is_deleted = true
+      RouteRepository.save(route)
+    end
   end
 end
