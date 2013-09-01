@@ -13,6 +13,7 @@ class Edge
   attribute :start_datetime, DateTime
   attribute :end_datetime, DateTime
   attribute :price, Integer
+  attribute :is_deleted, Boolean, :default => false
 
   belongs_to :route
 

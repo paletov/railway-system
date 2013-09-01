@@ -8,6 +8,7 @@ class Route
   attribute :id, Integer
   attribute :name, String
   attribute :company_name, String
+  attribute :is_deleted, Boolean, :default => false
 
   has_many :edges, :via => Edge
 

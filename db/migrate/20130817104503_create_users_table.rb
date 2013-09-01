@@ -4,6 +4,7 @@ class CreateUsersTable <  ActiveRecord::Migration
       t.string :name, :null => false
       t.string :password, :null => false
       t.integer :role_id, :null => false
+      t.boolean :is_deleted
     end
   end
 

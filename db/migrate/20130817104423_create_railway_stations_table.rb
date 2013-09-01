@@ -4,6 +4,7 @@ class CreateRailwayStationsTable <  ActiveRecord::Migration
       t.string :name, :null => false
       t.decimal :x
       t.decimal :y
+      t.boolean :is_deleted
     end
   end
 

@@ -1,10 +1,8 @@
-require 'spec_configurator'
-require 'database_seeder'
+require 'db_integration_spec_helper'
 require 'railway_network_controller'
 
 describe RailwayNetworkController do
   before :each do
-    #DatabaseSeeder.seed
     @railwayNetworkController = RailwayNetworkController.new
   end
 

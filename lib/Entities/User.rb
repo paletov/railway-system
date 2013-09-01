@@ -10,6 +10,7 @@ class User
   attribute :id, Integer
   attribute :name, String
   attribute :password, PasswordString
+  attribute :is_deleted, Boolean, :default => false
   references :role
 
   belongs_to :role

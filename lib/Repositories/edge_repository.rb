@@ -15,4 +15,5 @@ class EdgeRepository
   map_attribute :start_datetime, :to => 'Edge#start_datetime'
   map_attribute :end_datetime, :to => 'Edge#end_datetime'
   map_attribute :price, :to => 'Edge#price'
+  map_attribute :is_deleted, :to => "Edge#is_deleted"
 end

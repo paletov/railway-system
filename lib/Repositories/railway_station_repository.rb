@@ -11,4 +11,5 @@ class RailwayStationRepository
   map_attribute :name, :to => 'RailwayStation#name'
   map_attribute :x, :to => 'RailwayStation#x'
   map_attribute :y, :to => 'RailwayStation#y'
+  map_attribute :is_deleted, :to => "RailwayStation#is_deleted"
 end

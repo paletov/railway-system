@@ -21,27 +21,32 @@ ActiveRecord::Schema.define(:version => 20130817104503) do
     t.datetime "start_datetime",           :null => false
     t.datetime "end_datetime",             :null => false
     t.integer  "price",                    :null => false
+    t.boolean  "is_deleted"
   end
 
   create_table "railway_stations", :force => true do |t|
-    t.string  "name",                                :null => false
-    t.decimal "x",    :precision => 10, :scale => 0
-    t.decimal "y",    :precision => 10, :scale => 0
+    t.string  "name",       :null => false
+    t.decimal "x"
+    t.decimal "y"
+    t.boolean "is_deleted"
   end
 
   create_table "roles", :force => true do |t|
-    t.string "name", :null => false
+    t.string  "name",       :null => false
+    t.boolean "is_deleted"
   end
 
   create_table "routes", :force => true do |t|
-    t.string "name",         :null => false
-    t.string "company_name", :null => false
+    t.string  "name",         :null => false
+    t.string  "company_name", :null => false
+    t.boolean "is_deleted"
   end
 
   create_table "users", :force => true do |t|
-    t.string  "name",     :null => false
-    t.string  "password", :null => false
-    t.integer "role_id",  :null => false
+    t.string  "name",       :null => false
+    t.string  "password",   :null => false
+    t.integer "role_id",    :null => false
+    t.boolean "is_deleted"
   end
 
 end

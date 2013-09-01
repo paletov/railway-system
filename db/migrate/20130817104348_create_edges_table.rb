@@ -8,6 +8,7 @@ class CreateEdgesTable <  ActiveRecord::Migration
       t.datetime :start_datetime, :null => false
       t.datetime :end_datetime, :null => false
       t.integer :price, :null => false
+      t.boolean :is_deleted
     end
   end
 

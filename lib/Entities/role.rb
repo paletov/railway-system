@@ -7,6 +7,7 @@ class Role
 
   attribute :id, Integer
   attribute :name, String
+  attribute :is_deleted, Boolean, :default => false
 
   has_many :users, :via => User
 

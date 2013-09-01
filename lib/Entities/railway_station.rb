@@ -8,6 +8,7 @@ class RailwayStation
   attribute :name, String
   attribute :x, Decimal
   attribute :y, Decimal
+  attribute :is_deleted, Boolean, :default => false
 
   validate :instance_validations
 

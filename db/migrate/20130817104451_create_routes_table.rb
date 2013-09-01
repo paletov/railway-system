@@ -3,6 +3,7 @@ class CreateRoutesTable <  ActiveRecord::Migration
     create_table :routes do |t|
       t.string :name, :null => false
       t.string :company_name, :null => false
+      t.boolean :is_deleted
     end
   end
 

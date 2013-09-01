@@ -11,4 +11,5 @@ class UserRepository
   map_attribute :name, :to => 'User#name'
   map_attribute :password, :to => 'User#password'
   map_attribute :role_id, :to => 'User#role_id'
+  map_attribute :is_deleted, :to => "User#is_deleted"
 end

@@ -8,9 +8,13 @@ class EdgeController
   end
 
   def get_edges(filter = {})
+    filter[:is_deleted] = false
     EdgeRepository.where(filter)
   end
 
   def delete_edge(edge_id)
+    edge = EdgeRepository.where(:edge_id => edge_id)
+    edge.is_deleted = true
+    EdgeRepository.save(edge)
   end
 end
